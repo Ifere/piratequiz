@@ -1,19 +1,19 @@
 const express = require('express');
-const questionHandler = require("../controllers/question_controller");
+const { createQuestion, fetchQuestions, updateQuestion, deleteQuestion } = require("../controllers/question_controller");
 const api = express.Router();
 
 
 // C
-api.post('/users', questionHandler.createQuestion); 
+api.post('/users', createQuestion); 
 
 
 // R
-api.get('/users', questionHandler.fetchQuestions);
+api.get('/users', fetchQuestions);
 
 // U
-api.put('/users/:id', questionHandler.updateQuestions);
+api.put('/users/:id', updateQuestion);
 
 // D
-api.delete('/users/:id', questionHandler.deleteQuestion);
+api.delete('/users/:id', deleteQuestion);
 
 module.exports = api;

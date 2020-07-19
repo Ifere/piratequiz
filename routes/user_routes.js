@@ -1,20 +1,20 @@
 const express = require("express");
-const userHandler = require("../controllers/user_controller");
+const { createUser, fetchUsers, updateUser, deleteUser } = require("../controllers/user_controller");
 
 const api = express.Router();
 
 
 // C
-api.post('/users/create', userHandler.createUser); 
+api.post('/users/create', createUser); 
 
 
 // R
-api.get('/leaderboard', userHandler.fetchUsers);
+api.get('/leaderboard', fetchUsers);
 
 // U
-api.put('/users/:name', userHandler.updateUserDetails);
+api.put('/users/:name', updateUser);
 
 // D
-api.delete('/users/:name', userHandler.deleteUser);
+api.delete('/users/:name', deleteUser);
 
 module.exports =  api;

@@ -88,7 +88,7 @@ const deleteUser = async (req, res) => { //done
     }
 };
 
-module.exports = userHandler = {
+module.exports = {
     createUser,
     fetchUsers,
     updateUser,

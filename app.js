@@ -1,5 +1,5 @@
 const db = require("./config/db");
-const express = ("express");
+const express = require("express");
 const userApi = require("./routes/user_routes");
 const questionApi = require("./routes/question_routes");
 
@@ -8,7 +8,7 @@ const questionApi = require("./routes/question_routes");
 const app = express();
 
 // connects to db
-db.connectMongodb();
+db();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // mount apiRouter on app

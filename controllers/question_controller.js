@@ -90,7 +90,7 @@ const deleteQuestion = async (req, res) => {
     }
 };
 
-module.exports = questionHandler = {
+module.exports = {
     createQuestion,
     fetchQuestions,
     updateQuestion,
