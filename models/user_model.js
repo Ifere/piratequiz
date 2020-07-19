@@ -2,11 +2,11 @@ const { Schema, model } = require("mongoose");
 const mongoose = require("mongoose");
 
 const UserSchema = new Schema({
-    Name: {
+    name: {
         type: String,
         default: "",
     },
-    Score: {
+    score: {
         type: Number,
         default: ""
     }

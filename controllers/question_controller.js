@@ -4,15 +4,13 @@ const createQuestion = async (req, res) => {
     try {
         if (req.body.sn) {
             const num = req.body.sn;
+            console.log(req.body);
+
         
-        const check = await User.findOne({ sn: num });
-        let data;
-        if (!check) {
-            throw new Error('question already sent');
-        } else {
+
             data = await Question.create(req.body);
 
-        }
+        
         res.json({
             sucess: true,
             data
@@ -31,7 +29,7 @@ const updateQuestion = async (req, res) => {
     try {
             const update = req.body;
             const questionNumber = req.body.sn;
-            const data =await  User.findOneAndUpdate(questionNumber, { $set: update }, { new: true });
+            const data = await  Question.findOneAndUpdate(questionNumber, { $set: update }, { new: true });
         res.json({
             success: true,
             data,
@@ -52,6 +50,7 @@ const fetchQuestions = async (req, res) => {
     try {
         let filter = req.query;
         const data = await Question.find(filter);
+        console.log(data);
         res.json({
             success: true,
             data
@@ -73,7 +72,7 @@ const deleteQuestion = async (req, res) => {
         if (req.body.sn) {
             const num = req.body.sn;
             
-            const data = await User.finOneAndDelete({ sn: num});
+            const data = await Question.findOneAndDelete({ sn: num});
             res.json({
                 success: true,
             });

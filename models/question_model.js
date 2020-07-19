@@ -2,23 +2,23 @@ const mongoose = require("mongoose");
 const { Schema, model } = require("mongoose");
 
 const QuestionSchema = new Schema({
-    SN: {
+    sn: {
         type: Number,
         required: true,
     },
-    Question: {
+    question: {
         type: String,
         default: "",
     },
-    Type: {
+    type: {
         type: String,
         default: ""
     },
-    Options: {
+    options: {
         type: Array,
         default: []
     },
-    Answer: {
+    answer: {
         type: String,
         default: "",
     }

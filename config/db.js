@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 // const url = "mongodb://localhost:27017/nigma";
-const live = "mongodb+srv://ifere:haaland2020@cluster0-mvvga.mongodb.net/<dbname>?retryWrites=true&w=majority";
+const live = "mongodb+srv://ifere:haaland2020@cluster0-mvvga.mongodb.net/pirate?retryWrites=true&w=majority";
 
 module.exports = connectDB = () => {
     mongoose.connect(

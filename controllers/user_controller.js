@@ -30,7 +30,7 @@ const updateUser = async (req, res) => {
     try {
             const update = req.body;
             const name = req.body.name;
-            const data =await  User.findOneAndUpdate(name, { $set: update }, { new: true });
+            const data = await User.findOneAndUpdate(name, { $set: update }, { new: true });
         res.json({
             success: true,
             data,
