@@ -4,16 +4,16 @@ const api = express.Router();
 
 
 // C
-api.post('/users', createQuestion); 
+api.post('/questions', createQuestion); 
 
 
 // R
-api.get('/users', fetchQuestions);
+api.get('/questions', fetchQuestions);
 
 // U
-api.put('/users/:id', updateQuestion);
+api.put('/questions', updateQuestion);
 
 // D
-api.delete('/users/:id', deleteQuestion);
+api.delete('/questions', deleteQuestion);
 
 module.exports = api;

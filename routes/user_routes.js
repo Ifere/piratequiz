@@ -12,9 +12,9 @@ api.post('/users/create', createUser);
 api.get('/leaderboard', fetchUsers);
 
 // U
-api.put('/users/:name', updateUser);
+api.put('/users', updateUser);
 
 // D
-api.delete('/users/:name', deleteUser);
+api.delete('/users', deleteUser);
 
 module.exports =  api;
