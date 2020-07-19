@@ -5,15 +5,10 @@ const createUser = async (req, res) => { //done
         if (req.body.name) {
             req.body.name = req.body.name.toLowerCase();
         }
-        const check = await User.findOne({ name });
-        let data;
-        if (!check) {
-            throw new Error('Name already taken');
-        } else {
-            data = await User.create(req.body);
 
-        }
-        res.json({
+            data = await User.create(req.body);
+        
+            res.json({
             sucess: true,
             data
         })

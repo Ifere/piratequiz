@@ -8,7 +8,7 @@ const UserSchema = new Schema({
     },
     score: {
         type: Number,
-        default: ""
+        default: 0
     }
 });
 
